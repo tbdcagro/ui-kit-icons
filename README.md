@@ -26,11 +26,11 @@ import "@tbdc-agro-softwares/ui-kit-icons/vue/css";
 ```html
 <!-- Example.vue -->
 <script>
-  import { UIChevronForwardOutline } from "@tbdc-agro-softwares/icons/vue";
+  import { UIChevronLeft } from "@tbdc-agro-softwares/ui-kit-icons/vue";
 </script>
 
 <template>
-  <UIChevronForwardOutline />
+  <UIChevronLeft />
 </template>
 ```
 
