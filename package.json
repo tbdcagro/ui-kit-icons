@@ -1,0 +1,59 @@
+{
+  "name": "@tbdc-agro-softwares/ui-kit-icons",
+  "version": "0.0.1-beta",
+  "description": "A simple SVG icons library",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/TBDC-Agro-Softwares/ui-kit-icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TBDC-Agro-Softwares/ui-kit-icons.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "files": [
+    "/packages/resolvers/dist",
+    "/packages/vue-icons/dist"
+  ],
+  "exports": {
+    "./resolvers": {
+      "import": {
+        "default": "./packages/resolvers/dist/index.js",
+        "types": "./packages/resolvers/dist/index.d.ts"
+      },
+      "require": {
+        "default": "./packages/resolvers/dist/index.cjs",
+        "types": "./packages/resolvers/dist/index.d.ts"
+      }
+    },
+    "./vue": {
+      "import": {
+        "default": "./packages/vue-icons/dist/index.mjs",
+        "types": "./packages/vue-icons/dist/index.d.ts"
+      },
+      "require": {
+        "default": "./packages/vue-icons/dist/index.cjs",
+        "types": "./packages/vue-icons/dist/index.d.ts"
+      }
+    },
+    "./vue/css": "./packages/vue-icons/dist/style.css",
+    "./vue/css/*": "./packages/vue-icons/dist/css/*",
+    "./vue/scss/*": "./packages/vue-icons/dist/scss/*"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "optimize": "rimraf icons/dist && svgo -rf icons -o icons/dist"
+  },
+  "keywords": [
+    "icon",
+    "icons",
+    "svg",
+    "vue"
+  ],
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "sass": "^1.79.3"
+  }
+}

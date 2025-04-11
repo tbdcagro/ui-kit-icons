@@ -1,0 +1,11 @@
+/**
+ * Vue resolver to use with Unplugin.
+ * Docs: https://github.com/unplugin/unplugin-vue-components
+ */
+export declare function UIKitIconVueResolver(): {
+    type: "component" | "directive";
+    resolve: (name: string) => string | {
+        name: string;
+        from: string;
+    };
+};
