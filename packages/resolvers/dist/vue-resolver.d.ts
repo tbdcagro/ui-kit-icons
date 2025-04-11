@@ -4,8 +4,8 @@
  */
 export declare function UIKitIconVueResolver(): {
     type: "component" | "directive";
-    resolve: (name: string) => string | {
+    resolve: (name: string) => {
         name: string;
         from: string;
-    };
+    } | undefined;
 };
