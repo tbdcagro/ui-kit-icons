@@ -31,7 +31,7 @@ jobs:
 
       - name: Bump version (patch)
         run: |
-          npm version prerelease --preid=beta --no-git-tag-version
+          npm version patch --no-git-tag-version
 
       - name: Commit and push version bump
         run: |
@@ -41,20 +41,45 @@ jobs:
           git diff --cached --quiet || git commit -m "chore(release): bump version"
           git push origin main
 
+      - name: Get current version
+        id: get_version
+        run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Get previous tag
+        id: get_previous_tag
+        run: echo "tag=$(git describe --tags --abbrev=0 || echo '')" >> "$GITHUB_OUTPUT"
+
       - name: Create Git Tag
         run: |
-          VERSION=$(node -p "require('./package.json').version")
-          git tag "v$VERSION"
-          git push origin "v$VERSION"
+          git tag "${{ steps.get_version.outputs.version }}"
+          git push origin "${{ steps.get_version.outputs.version }}"
 
       - name: Publish to NPM (public package)
         run: pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ORIGINAL_NPM_TOKEN }}
 
+      - name: Generate Changelog
+        id: changelog
+        run: |
+          PREV_TAG=${{ steps.get_previous_tag.outputs.tag }}
+          CURR_TAG=${{ steps.get_version.outputs.version }}
+
+          if [ -z "$PREV_TAG" ]; then
+            LOG=$(git log --pretty=format:"- %s")
+          else
+            LOG=$(git log "$PREV_TAG"..HEAD --pretty=format:"- %s")
+          fi
+
+          echo "log<<EOF" >> $GITHUB_OUTPUT
+          echo "$LOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ github.ref_name }}
+          tag_name: ${{ steps.get_version.outputs.version }}
+          name: v${{ steps.get_version.outputs.version }}
+          body: ${{ steps.changelog.outputs.log }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
