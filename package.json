@@ -19,24 +19,14 @@
   ],
   "exports": {
     "./resolvers": {
-      "import": {
-        "default": "./packages/resolvers/dist/index.js",
-        "types": "./packages/resolvers/dist/index.d.ts"
-      },
-      "require": {
-        "default": "./packages/resolvers/dist/index.cjs",
-        "types": "./packages/resolvers/dist/index.d.ts"
-      }
+      "import": "./packages/resolvers/dist/index.js",
+      "require": "./packages/resolvers/dist/index.cjs",
+      "types": "./packages/resolvers/dist/index.d.ts"
     },
     "./vue": {
-      "import": {
-        "default": "./packages/vue-icons/dist/index.mjs",
-        "types": "./packages/vue-icons/dist/index.d.ts"
-      },
-      "require": {
-        "default": "./packages/vue-icons/dist/index.cjs",
-        "types": "./packages/vue-icons/dist/index.d.ts"
-      }
+      "import": "./packages/vue-icons/dist/index.mjs",
+      "require": "./packages/vue-icons/dist/index.cjs",
+      "types": "./packages/vue-icons/dist/index.d.ts"
     },
     "./vue/css": "./packages/vue-icons/dist/style.css",
     "./vue/css/*": "./packages/vue-icons/dist/css/*",
