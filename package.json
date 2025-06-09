@@ -10,7 +10,6 @@
     "url": "git+https://github.com/TBDC-Agro-Softwares/ui-kit-icons.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "files": [
