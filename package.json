@@ -1,13 +1,13 @@
 {
-  "name": "@tbdc-agro-softwares/ui-kit-icons",
+  "name": "@tbdcagro/ui-kit-icons",
   "version": "0.0.6",
   "description": "A simple SVG icons library",
   "license": "MIT",
   "type": "module",
-  "homepage": "https://github.com/TBDC-Agro-Softwares/ui-kit-icons#readme",
+  "homepage": "https://github.com/tbdcagro/ui-kit-icons#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TBDC-Agro-Softwares/ui-kit-icons.git"
+    "url": "git+https://github.com/tbdcagro/ui-kit-icons.git"
   },
   "publishConfig": {
     "access": "public"
