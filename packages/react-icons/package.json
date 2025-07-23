@@ -9,7 +9,7 @@
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "node generate.js && vite build && tsc --emitDeclarationOnly --project tsconfig.json",
+    "build": "node generate.js && vite build",
     "build:types": "tsc --emitDeclarationOnly --project tsconfig.json",
     "prepublishOnly": "pnpm run build"
   },
@@ -23,6 +23,7 @@
     "@vitejs/plugin-react": "^4.7.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.5.3"
   }
 }
