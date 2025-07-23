@@ -44,12 +44,51 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 
 fs.writeFileSync(path.join(outputDir, "types.ts"), typeDefinition);
 
+const convertSVGAttributes = (svgContent) => {
+  const attributeMap = {
+    "clip-rule": "clipRule",
+    "fill-rule": "fillRule",
+    "stroke-width": "strokeWidth",
+    "stroke-linecap": "strokeLinecap",
+    "stroke-linejoin": "strokeLinejoin",
+    "stroke-opacity": "strokeOpacity",
+    "fill-opacity": "fillOpacity",
+    "font-family": "fontFamily",
+    "font-size": "fontSize",
+    "font-weight": "fontWeight",
+    "text-anchor": "textAnchor",
+    "alignment-baseline": "alignmentBaseline",
+    "baseline-shift": "baselineShift",
+    "dominant-baseline": "dominantBaseline",
+    "letter-spacing": "letterSpacing",
+    "word-spacing": "wordSpacing",
+    "text-decoration": "textDecoration",
+    "xml:space": "xmlSpace",
+    "aria-*": "aria*",
+    "xlink:*": "xlink*",
+  };
+
+  return svgContent.replace(/([a-z-]+)="([^"]*)"/g, (match, attr, value) => {
+    // Converte atributos conhecidos
+    if (attributeMap[attr]) {
+      return `${attributeMap[attr]}="${value}"`;
+    }
+    // Converte outros atributos com hífen para camelCase
+    if (attr.includes("-")) {
+      const reactAttr = attr.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+      return `${reactAttr}="${value}"`;
+    }
+    // Mantém atributos que já estão corretos
+    return match;
+  });
+};
+
 svgFiles.forEach((file) => {
   const iconName = path.basename(file, ".svg");
   const componentName = `UI${toPascalCase(iconName)}`;
   const svgContent = fs.readFileSync(path.join(svgDir, file), "utf8");
 
-  const processedSvg = svgContent.replace(
+  const processedSvg = convertSVGAttributes(svgContent).replace(
     /<svg([^>]*)>/,
     `<svg$1 {...rest} className={\`\${clickable ? 'is-clickable ' : ''}\${size ? size + ' ' : ''}\${className || ''}\`} style={{ cursor: clickable ? 'pointer' : 'inherit', ...style }}>`
   );
