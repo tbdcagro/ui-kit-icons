@@ -14,7 +14,8 @@
   },
   "files": [
     "/packages/resolvers/dist",
-    "/packages/vue-icons/dist"
+    "/packages/vue-icons/dist",
+    "/packages/react-icons/dist"
   ],
   "exports": {
     "./resolvers": {
