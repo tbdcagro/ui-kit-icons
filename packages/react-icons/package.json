@@ -1,0 +1,28 @@
+{
+  "name": "react-icons",
+  "version": "1.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "node generate.js && vite build && tsc --emitDeclarationOnly --project tsconfig.json",
+    "build:types": "tsc --emitDeclarationOnly --project tsconfig.json",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.7.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2",
+    "vite": "^5.4.8"
+  }
+}
