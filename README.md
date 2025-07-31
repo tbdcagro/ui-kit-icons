@@ -13,20 +13,20 @@ A simple icon library
 To install the package use the following command:
 
 ```bash
-pnpm add @tbdc-agro-softwares/ui-kit-icons
+pnpm add @tbdcagro/ui-kit-icons
 ```
 
 Usage with Vue 3:
 
 ```ts
 // main.[ts/js]
-import "@tbdc-agro-softwares/ui-kit-icons/vue/css";
+import "@tbdcagro/ui-kit-icons/vue/css";
 ```
 
 ```html
 <!-- Example.vue -->
 <script>
-  import { UIChevronLeft } from "@tbdc-agro-softwares/ui-kit-icons/vue";
+  import { UIChevronLeft } from "@tbdcagro/ui-kit-icons/vue";
 </script>
 
 <template>
@@ -38,7 +38,7 @@ To use it with unplugin and vite, import our resolver
 
 ```ts
 import Components from "unplugin-vue-components/vite";
-import { UIKitIconVueResolver } from "@tbdc-agro-softwares/ui-kit-icons/resolvers";
+import { UIKitIconVueResolver } from "@tbdcagro/ui-kit-icons/resolvers";
 
 // ...
 plugins: [

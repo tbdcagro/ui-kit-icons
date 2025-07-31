@@ -3,12 +3,12 @@
  * Docs: https://github.com/unplugin/unplugin-vue-components
  */
 export function UIKitIconVueResolver() {
-  return {
-    type: "component" as "component" | "directive",
-    resolve: (name: string) => {
-      if (name.startsWith("UI")) {
-        return { name, from: `@tbdc-agro-softwares/ui-kit-icons/vue` };
-      }
-    },
-  };
+	return {
+		type: 'component' as 'component' | 'directive',
+		resolve: (name: string) => {
+			if (name.startsWith('UI')) {
+				return { name, from: `@tbdcagro/ui-kit-icons/vue` };
+			}
+		},
+	};
 }
