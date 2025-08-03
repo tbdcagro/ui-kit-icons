@@ -2193,6 +2193,7 @@ export * from './components/UIFeatherOff';
 export * from './components/UIFeather';
 export * from './components/UIFenceOff';
 export * from './components/UIFence';
+export * from './components/UIFertilizer';
 export * from './components/UIFidgetSpinner';
 export * from './components/UIFile3d';
 export * from './components/UIFileAlert';

@@ -2193,6 +2193,7 @@ export { default as UIFeather } from './components/UIFeather.vue';
 export { default as UIFeatherOff } from './components/UIFeatherOff.vue';
 export { default as UIFence } from './components/UIFence.vue';
 export { default as UIFenceOff } from './components/UIFenceOff.vue';
+export { default as UIFertilizer } from './components/UIFertilizer.vue';
 export { default as UIFidgetSpinner } from './components/UIFidgetSpinner.vue';
 export { default as UIFile } from './components/UIFile.vue';
 export { default as UIFile3d } from './components/UIFile3d.vue';
