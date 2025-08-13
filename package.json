@@ -1,9 +1,10 @@
 {
   "name": "@tbdcagro/ui-kit-icons",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "A simple SVG icons library",
   "license": "MIT",
   "type": "module",
+  "sideEffects": false,
   "homepage": "https://github.com/tbdcagro/ui-kit-icons#readme",
   "repository": {
     "type": "git",
@@ -23,14 +24,19 @@
       "require": "./packages/resolvers/dist/index.cjs",
       "types": "./packages/resolvers/dist/index.d.ts"
     },
-    "./vue": {
-      "import": "./packages/vue-icons/dist/index.mjs",
-      "require": "./packages/vue-icons/dist/index.cjs",
-      "types": "./packages/vue-icons/dist/index.d.ts"
-    },
     "./vue/css": "./packages/vue-icons/dist/style.css",
     "./vue/css/*": "./packages/vue-icons/dist/css/*",
     "./vue/scss/*": "./packages/vue-icons/dist/scss/*",
+    "./vue": {
+      "import": "./packages/vue-icons/dist/index.js",
+      "types": "./packages/vue-icons/dist/index.d.ts"
+    },
+    "./vue/*": {
+      "import": {
+        "default": "./packages/vue-icons/dist/components/*.js",
+        "types": "./packages/vue-icons/dist/index.d.ts"
+      }
+    },
     "./react": {
       "import": "./packages/react-icons/dist/index.mjs",
       "require": "./packages/react-icons/dist/index.cjs",
