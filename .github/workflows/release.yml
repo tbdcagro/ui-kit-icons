@@ -1,5 +1,8 @@
 on:
   push:
+    paths:
+      - icons/**
+      - packages/**
     branches:
       - main
 
@@ -10,7 +13,7 @@ jobs:
 
     steps:
       - name: Stop if commit was made by GitHub App
-        if: github.actor == 'github-actions[bot]'
+        if: github.actor == 'github-actions[bot]' || github.actor == 'tbdc-actions-auto-commit-bot'
         run: |
           echo "Commit feito pelo github-actions[bot]. Encerrando para evitar loop."
           exit 0
@@ -70,6 +73,8 @@ jobs:
         env:
             GH_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git tag "${{ steps.get_version.outputs.version }}"
           git push origin "${{ steps.get_version.outputs.version }}"
 
