@@ -3871,6 +3871,7 @@ export { default as UIRelationManyToMany } from './components/UIRelationManyToMa
 export { default as UIRelationOneToMany } from './components/UIRelationOneToMany.vue';
 export { default as UIRelationOneToOne } from './components/UIRelationOneToOne.vue';
 export { default as UIReload } from './components/UIReload.vue';
+export { default as UIRemove } from './components/UIRemove.vue';
 export { default as UIReorder } from './components/UIReorder.vue';
 export { default as UIRepeat } from './components/UIRepeat.vue';
 export { default as UIRepeatOff } from './components/UIRepeatOff.vue';
