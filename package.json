@@ -14,11 +14,13 @@
     "access": "public"
   },
   "files": [
+    "/icons",
     "/packages/resolvers/dist",
     "/packages/vue-icons/dist",
     "/packages/react-icons/dist"
   ],
   "exports": {
+    "./raw/*": "./icons/*.svg",
     "./resolvers": {
       "import": "./packages/resolvers/dist/index.js",
       "require": "./packages/resolvers/dist/index.cjs",
