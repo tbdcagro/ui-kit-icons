@@ -2547,6 +2547,7 @@ export { default as UIHandTwoFingers } from './components/UIHandTwoFingers.vue';
 export { default as UIHanger } from './components/UIHanger.vue';
 export { default as UIHanger2 } from './components/UIHanger2.vue';
 export { default as UIHangerOff } from './components/UIHangerOff.vue';
+export { default as UIHarvester } from './components/UIHarvester.vue';
 export { default as UIHash } from './components/UIHash.vue';
 export { default as UIHaze } from './components/UIHaze.vue';
 export { default as UIHazeMoon } from './components/UIHazeMoon.vue';

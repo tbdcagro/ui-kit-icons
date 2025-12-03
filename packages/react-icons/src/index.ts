@@ -2547,6 +2547,7 @@ export * from './components/UIHandTwoFingers';
 export * from './components/UIHanger2';
 export * from './components/UIHangerOff';
 export * from './components/UIHanger';
+export * from './components/UIHarvester';
 export * from './components/UIHash';
 export * from './components/UIHazeMoon';
 export * from './components/UIHaze';
