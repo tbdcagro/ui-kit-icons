@@ -1,23 +1,25 @@
-@use "sass:list";
-@use "./variables" as variables;
+@use 'sass:list';
+@use './variables' as variables;
 
 $available-sizes: variables.$available-sizes !default;
 
 .ui-kit-icon {
-  fill: currentColor;
-  vertical-align: middle;
+	fill: currentColor;
+	vertical-align: middle;
+	pointer-events: none;
 
-  &.is-clickable {
-    cursor: pointer;
-  }
+	&.is-clickable {
+		cursor: pointer;
+		pointer-events: unset;
+	}
 
-  @each $name, $pair in $available-sizes {
-    $size: list.nth($pair, 1);
-    &.is-#{"" + $name} {
-      width: $size;
-      max-width: $size;
-      height: $size;
-      max-height: $size;
-    }
-  }
+	@each $name, $pair in $available-sizes {
+		$size: list.nth($pair, 1);
+		&.is-#{'' + $name} {
+			width: $size;
+			max-width: $size;
+			height: $size;
+			max-height: $size;
+		}
+	}
 }
