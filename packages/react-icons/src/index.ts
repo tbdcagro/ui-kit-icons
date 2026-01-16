@@ -3874,6 +3874,7 @@ export * from './components/UIRelationManyToMany';
 export * from './components/UIRelationOneToMany';
 export * from './components/UIRelationOneToOne';
 export * from './components/UIReload';
+export * from './components/UIRemoveFilled';
 export * from './components/UIRemove';
 export * from './components/UIReorder';
 export * from './components/UIRepeatOff';
