@@ -1580,6 +1580,8 @@ export * from './components/UIColorPickerOff';
 export * from './components/UIColorPicker';
 export * from './components/UIColorSwatchOff';
 export * from './components/UIColorSwatch';
+export * from './components/UIColorsOutline';
+export * from './components/UIColors';
 export * from './components/UIColumnInsertLeft';
 export * from './components/UIColumnInsertRight';
 export * from './components/UIColumnRemove';

@@ -1580,6 +1580,8 @@ export { default as UIColorPicker } from './components/UIColorPicker.vue';
 export { default as UIColorPickerOff } from './components/UIColorPickerOff.vue';
 export { default as UIColorSwatch } from './components/UIColorSwatch.vue';
 export { default as UIColorSwatchOff } from './components/UIColorSwatchOff.vue';
+export { default as UIColors } from './components/UIColors.vue';
+export { default as UIColorsOutline } from './components/UIColorsOutline.vue';
 export { default as UIColumnInsertLeft } from './components/UIColumnInsertLeft.vue';
 export { default as UIColumnInsertRight } from './components/UIColumnInsertRight.vue';
 export { default as UIColumnRemove } from './components/UIColumnRemove.vue';
