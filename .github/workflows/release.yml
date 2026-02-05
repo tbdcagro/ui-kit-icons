@@ -33,8 +33,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          registry-url: https://registry.npmjs.org/
+          node-version: 20
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
@@ -84,9 +83,7 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to Github (public package)
-        run: |
-          npm config set registry https://npm.pkg.github.com/
-          npm publish
+        run: pnpm publish --access restricted
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
