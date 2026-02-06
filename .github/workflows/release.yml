@@ -9,7 +9,7 @@ on:
 jobs:
   release:
     name: Build, Version, Tag and Publish
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Stop if commit was made by GitHub App
@@ -38,10 +38,12 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 9
 
       - name: Install dependencies
         run: pnpm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build library
         run: pnpm build
@@ -77,15 +79,15 @@ jobs:
           git tag "${{ steps.get_version.outputs.version }}"
           git push origin "${{ steps.get_version.outputs.version }}"
 
-      # - name: Publish to NPM (public package)
-      #   run: pnpm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish to Github (public package)
+      - name: Publish to NPM (restricted package)
         run: pnpm publish --access restricted
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to Github (public package)
+        run: |
+          npm config set registry https://npm.pkg.github.com/
+          npm publish
 
       - name: Generate Changelog
         id: changelog
