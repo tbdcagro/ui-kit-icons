@@ -87,7 +87,7 @@ jobs:
       - name: Publish to NPM (restricted package)
         run: pnpm publish --access restricted
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.ORIGINAL_NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to GitHub Packages
         run: pnpm publish --access public
