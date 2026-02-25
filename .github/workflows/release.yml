@@ -13,7 +13,7 @@ on:
 jobs:
   release:
     name: Build, Version, Tag and Publish
-    runs-on: linux
+    runs-on: ubuntu-latest
 
     steps:
       - name: Stop if commit was made by GitHub App
