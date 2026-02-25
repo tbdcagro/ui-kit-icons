@@ -13,7 +13,7 @@ on:
 jobs:
   release:
     name: Build, Version, Tag and Publish
-    runs-on: self-hosted
+    runs-on: linux
 
     steps:
       - name: Stop if commit was made by GitHub App
