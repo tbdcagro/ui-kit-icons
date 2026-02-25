@@ -1,4 +1,5 @@
 export const IconSizeOptions = [
+  "is-12",
   "is-16",
   "is-20",
   "is-24",
