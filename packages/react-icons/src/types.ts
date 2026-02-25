@@ -9,7 +9,7 @@ export const IconSizeOptions = [
   "is-52",
 ] as const;
 
-export type IconSize = (typeof IconSizeOptions)[number];
+export type IconSize = typeof IconSizeOptions[number];
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   clickable?: boolean;
