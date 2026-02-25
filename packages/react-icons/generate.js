@@ -25,6 +25,7 @@ ensureDir(path.join(outputDir, "components"));
 const svgFiles = fs.readdirSync(svgDir).filter((file) => file.endsWith(".svg"));
 
 const typeDefinition = `export const IconSizeOptions = [
+  "is-12",
   "is-16",
   "is-20",
   "is-24",
@@ -90,7 +91,7 @@ svgFiles.forEach((file) => {
 
   const processedSvg = convertSVGAttributes(svgContent).replace(
     /<svg([^>]*)>/,
-    `<svg$1 {...rest} className={\`\${clickable ? 'is-clickable ' : ''}\${size ? size + ' ' : ''}\${className || ''}\`} style={{ cursor: clickable ? 'pointer' : 'inherit', ...style }}>`
+    `<svg$1 {...rest} className={\`\${clickable ? 'is-clickable ' : ''}\${size ? size + ' ' : ''}\${className || ''}\`} style={{ cursor: clickable ? 'pointer' : 'inherit', ...style }}>`,
   );
 
   const componentContent = `import React from 'react';
@@ -109,7 +110,7 @@ export const ${componentName} = ({
 
   fs.writeFileSync(
     path.join(outputDir, "components", `${componentName}.tsx`),
-    componentContent
+    componentContent,
   );
 });
 
