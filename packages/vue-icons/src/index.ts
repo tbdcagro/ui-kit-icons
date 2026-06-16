@@ -1605,6 +1605,7 @@ export { default as UIConePlus } from './components/UIConePlus.vue';
 export { default as UIConfetti } from './components/UIConfetti.vue';
 export { default as UIConfettiOff } from './components/UIConfettiOff.vue';
 export { default as UIConfucius } from './components/UIConfucius.vue';
+export { default as UIConsulting } from './components/UIConsulting.vue';
 export { default as UIContainer } from './components/UIContainer.vue';
 export { default as UIContainerOff } from './components/UIContainerOff.vue';
 export { default as UIContrast } from './components/UIContrast.vue';

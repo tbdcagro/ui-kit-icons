@@ -1605,6 +1605,7 @@ export * from './components/UICone';
 export * from './components/UIConfettiOff';
 export * from './components/UIConfetti';
 export * from './components/UIConfucius';
+export * from './components/UIConsulting';
 export * from './components/UIContainerOff';
 export * from './components/UIContainer';
 export * from './components/UIContrast2Off';
