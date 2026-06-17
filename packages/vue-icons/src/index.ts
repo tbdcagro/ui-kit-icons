@@ -3445,6 +3445,7 @@ export { default as UINavigationTop } from './components/UINavigationTop.vue';
 export { default as UINavigationUp } from './components/UINavigationUp.vue';
 export { default as UINavigationWest } from './components/UINavigationWest.vue';
 export { default as UINavigationX } from './components/UINavigationX.vue';
+export { default as UINdvi } from './components/UINdvi.vue';
 export { default as UINeedle } from './components/UINeedle.vue';
 export { default as UINeedleThread } from './components/UINeedleThread.vue';
 export { default as UINetwork } from './components/UINetwork.vue';

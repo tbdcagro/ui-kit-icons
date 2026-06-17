@@ -3445,6 +3445,7 @@ export * from './components/UINavigationUp';
 export * from './components/UINavigationWest';
 export * from './components/UINavigationX';
 export * from './components/UINavigation';
+export * from './components/UINdvi';
 export * from './components/UINeedleThread';
 export * from './components/UINeedle';
 export * from './components/UINetworkOff';
