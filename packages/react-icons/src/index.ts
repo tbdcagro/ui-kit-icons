@@ -1417,6 +1417,7 @@ export * from './components/UICircleNumber9';
 export * from './components/UICircleOff';
 export * from './components/UICirclePercentage';
 export * from './components/UICirclePlus2';
+export * from './components/UICirclePlusFilled';
 export * from './components/UICirclePlus';
 export * from './components/UICircleRectangleOff';
 export * from './components/UICircleRectangle';

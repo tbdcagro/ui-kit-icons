@@ -1419,6 +1419,7 @@ export { default as UICircleOff } from './components/UICircleOff.vue';
 export { default as UICirclePercentage } from './components/UICirclePercentage.vue';
 export { default as UICirclePlus } from './components/UICirclePlus.vue';
 export { default as UICirclePlus2 } from './components/UICirclePlus2.vue';
+export { default as UICirclePlusFilled } from './components/UICirclePlusFilled.vue';
 export { default as UICircleRectangle } from './components/UICircleRectangle.vue';
 export { default as UICircleRectangleOff } from './components/UICircleRectangleOff.vue';
 export { default as UICircleSquare } from './components/UICircleSquare.vue';
