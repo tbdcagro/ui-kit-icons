@@ -4476,6 +4476,7 @@ export { default as UIStrikethrough } from './components/UIStrikethrough.vue';
 export { default as UISubmarine } from './components/UISubmarine.vue';
 export { default as UISubscript } from './components/UISubscript.vue';
 export { default as UISubtask } from './components/UISubtask.vue';
+export { default as UISubtilte } from './components/UISubtilte.vue';
 export { default as UISum } from './components/UISum.vue';
 export { default as UISumOff } from './components/UISumOff.vue';
 export { default as UISun } from './components/UISun.vue';

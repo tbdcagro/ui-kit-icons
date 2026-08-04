@@ -4476,6 +4476,7 @@ export * from './components/UIStrikethrough';
 export * from './components/UISubmarine';
 export * from './components/UISubscript';
 export * from './components/UISubtask';
+export * from './components/UISubtilte';
 export * from './components/UISumOff';
 export * from './components/UISum';
 export * from './components/UISunElectricity';
