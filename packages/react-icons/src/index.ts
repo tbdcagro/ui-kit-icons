@@ -2442,6 +2442,7 @@ export * from './components/UIFunctionOff';
 export * from './components/UIFunction';
 export * from './components/UIGalaxy';
 export * from './components/UIGallonMoney';
+export * from './components/UIGallon';
 export * from './components/UIGardenCartOff';
 export * from './components/UIGardenCart';
 export * from './components/UIGasStationOff';

@@ -2441,6 +2441,7 @@ export { default as UIFunction } from './components/UIFunction.vue';
 export { default as UIFunctionFilled } from './components/UIFunctionFilled.vue';
 export { default as UIFunctionOff } from './components/UIFunctionOff.vue';
 export { default as UIGalaxy } from './components/UIGalaxy.vue';
+export { default as UIGallon } from './components/UIGallon.vue';
 export { default as UIGallonMoney } from './components/UIGallonMoney.vue';
 export { default as UIGardenCart } from './components/UIGardenCart.vue';
 export { default as UIGardenCartOff } from './components/UIGardenCartOff.vue';
