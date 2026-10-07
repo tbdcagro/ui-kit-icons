@@ -4018,6 +4018,7 @@ export { default as UIScubaMaskOff } from './components/UIScubaMaskOff.vue';
 export { default as UISdk } from './components/UISdk.vue';
 export { default as UISearch } from './components/UISearch.vue';
 export { default as UISearchOff } from './components/UISearchOff.vue';
+export { default as UISearchWarn } from './components/UISearchWarn.vue';
 export { default as UISection } from './components/UISection.vue';
 export { default as UISectionSign } from './components/UISectionSign.vue';
 export { default as UISeeding } from './components/UISeeding.vue';

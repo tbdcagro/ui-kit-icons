@@ -4017,6 +4017,7 @@ export * from './components/UIScubaMaskOff';
 export * from './components/UIScubaMask';
 export * from './components/UISdk';
 export * from './components/UISearchOff';
+export * from './components/UISearchWarn';
 export * from './components/UISearch';
 export * from './components/UISectionSign';
 export * from './components/UISection';
